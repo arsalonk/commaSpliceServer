@@ -29,7 +29,7 @@ app.use(
 );
 
 app.get('/api/users', (req,res,next) => {
-  console.log();
+  console.log(process.env.DATABASE_URL);
   
   User.find()
     .then(results => res.json(results))
