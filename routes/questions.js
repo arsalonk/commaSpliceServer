@@ -1,0 +1,17 @@
+'use strict';
+
+const express = require('express');
+const router = express.Router();
+
+
+const Questions = require('../models/questions')
+
+router.get('/', (req, res, next) => {
+  Questions.find()
+    .then(results => {
+      res.json(results);
+    })
+    .catch(err => next(err));
+});
+
+module.exports = router;
