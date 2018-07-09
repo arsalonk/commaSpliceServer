@@ -1,14 +1,20 @@
 'use strict';
 
+require('dotenv').config();
+
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 
 const { PORT, CLIENT_ORIGIN } = require('./config');
 const { dbConnect } = require('./db-mongoose');
-// const {dbConnect} = require('./db-knex');
+
+const User = require('./users/models');
 
 const app = express();
+app.use(express.json()); //parse req body
+
+
 
 app.use(
   morgan(process.env.NODE_ENV === 'production' ? 'common' : 'dev', {
@@ -21,6 +27,15 @@ app.use(
     origin: CLIENT_ORIGIN
   })
 );
+
+app.get('/api/users', (req,res,next) => {
+  console.log();
+  
+  User.find()
+    .then(results => res.json(results))
+    .catch(err => next(err))
+});
+
 
 function runServer(port = PORT) {
   const server = app
