@@ -12,6 +12,8 @@ const jwtStrategy = require('../passport/jwt');
 const { JWT_SECRET, JWT_EXPIRY } = require('../config');
 
 const User = require('../models/user')
+const Questions = require('../models/questions')
+
 
 const options = { session: false, failWithError: true };
 
@@ -46,13 +48,27 @@ router.post('/register', (req, res) => {
       }
 
       // If there is no existing user, hash the password
-      return User.hashPassword(password);
+      return Promise.all([User.hashPassword(password), Questions.find()])
     })
-    .then(hash => {
+    .then(([hash, questions]) => {
+      let qMap = questions.map((q,i) => {
+        let next;
+        if(i >= questions.length-1){
+          next = 0
+        } else {
+          next = i + 1
+        }
+        return {
+          questionId: q._id,
+          next
+        }
+      })
       console.log(hash);
       return User.create({
         username,
         password: hash,
+        list: qMap,
+        
       });
     })
     .then(user => {

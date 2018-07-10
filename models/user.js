@@ -7,7 +7,14 @@ const userSchema = mongoose.Schema({
 
   username: {type: String, required:true},
   password: {type: String, required: true},
-  list: Array
+  list: [
+    {
+      questionId: { type: mongoose.Schema.Types.ObjectId, ref: 'Question', required:true},
+      m: { type: Number, required: true, default : 1},
+      next: { type: Number, required:true}
+    }
+  ],
+  head: {type: Number, default: 0}
 
 });
 
