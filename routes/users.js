@@ -15,4 +15,30 @@ router.get('/', (req, res, next) => {
     .catch(err => next(err));
 });
 
+router.get('/:id', (req, res, next) => {
+  const { id } = req.params;
+  User.findOne({ _id: id })
+    .then(results => {
+      res.json(results);
+    })
+    .catch(err => next(err));
+});
+
+router.put('/:id', (req, res, next) => {
+  const { id } = req.params;
+  const { head } = req.body;
+  const updateUser = { head };
+  User.findOneAndUpdate({ _id: id }, updateUser, { new: true })
+    .then(result => {
+      if (result) {
+        res.json(result);
+      } else {
+        next();
+      }
+    })
+    .catch(err => {
+      next(err);
+    });
+});
+
 module.exports = router;
