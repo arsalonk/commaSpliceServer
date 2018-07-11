@@ -11,7 +11,9 @@ const userSchema = mongoose.Schema({
     {
       questionId: { type: mongoose.Schema.Types.ObjectId, ref: 'Question', required:true},
       m: { type: Number, required: true, default : 1},
-      next: { type: Number, required:true}
+      next: { type: Number, required:true},
+      question: String,
+      answer: String
     }
   ],
   head: {type: Number, default: 0}

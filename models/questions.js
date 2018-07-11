@@ -4,8 +4,8 @@ const mongoose = require ('mongoose');
 
 const questionsSchema = mongoose.Schema({
 
-  word: {type: String, required:true},
-  english: {type: String, required: true},
+  question: {type: String, required:true},
+  answer: {type: String, required: true},
   m: {type: Number, required: true}
 
 });

@@ -60,6 +60,7 @@ router.post('/register', (req, res) => {
         }
         return {
           questionId: q._id,
+          question: q.question,
           next
         }
       })
