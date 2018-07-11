@@ -5,9 +5,8 @@ const mongoose = require ('mongoose');
 const questionsSchema = mongoose.Schema({
 
   question: {type: String, required:true},
-  answer: {type: String, required: true},
-  m: {type: Number, required: true}
-
+  answer: {type: String, required: true}
+  
 });
 
 questionsSchema.set('toObject', {

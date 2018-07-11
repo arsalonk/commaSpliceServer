@@ -19,7 +19,7 @@ router.get('/:id', (req, res, next) => {
   const { id } = req.params;
   User.findOne({ _id: id })
     .then(results => {
-      res.json(results);
+      res.json(results.list[results.head]);
     })
     .catch(err => next(err));
 });
