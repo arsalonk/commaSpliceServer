@@ -12,7 +12,7 @@ router.use('/', passport.authenticate('jwt', { session: false, failWithError: tr
 router.get('/', (req, res, next) => {
   Questions.find()
     .then(results => {
-      res.json(results[0].english);
+      res.json(results);
     })
     .catch(err => next(err));
 });

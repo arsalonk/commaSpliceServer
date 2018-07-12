@@ -43,4 +43,36 @@ router.put('/:id', (req, res, next) => {
     });
 });
 
+router.post('/answer', (req, res, next) => {
+  const userId = req.user.id;
+  const { answer } = req.body;
+  User.findById(userId)
+    .then(user => {
+      const head = user.head;
+      const question = user.list[head];
+      if (answer === question.answer) {
+        question.m *= 2;
+      } else {
+        question.m = 1;
+      }
+
+      let count = question.m;
+      let currentQ = question;
+      if (count > user.list.length-1) {
+        count = user.list.length-1;
+      }
+      while (count) {
+        currentQ = user.list[currentQ.next];
+        count--;
+      }
+
+      user.head = question.next;
+      question.next = currentQ.next;
+      currentQ.next = head;
+      return user.save();
+    })
+    .then(user => res.json(user))
+    .catch(err => next(err));
+})
+
 module.exports = router;
