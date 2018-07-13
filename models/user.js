@@ -13,7 +13,10 @@ const userSchema = mongoose.Schema({
       m: { type: Number, required: true, default : 1},
       next: { type: Number, required:true},
       question: String,
-      answer: String
+      answer: String,
+      correct: {type: Number, default: 0},
+      total: {type: Number, default: 0},
+      pronounce: String
     }
   ],
   head: {type: Number, default: 0}

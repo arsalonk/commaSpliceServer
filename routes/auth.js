@@ -62,10 +62,10 @@ router.post('/register', (req, res) => {
           questionId: q._id,
           question: q.question,
           next,
-          answer: q.answer
+          answer: q.answer,
+          pronounce: q.pronounce
         }
       })
-      console.log(hash);
       return User.create({
         username,
         password: hash,

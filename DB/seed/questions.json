@@ -1,22 +1,52 @@
 [
   {
     "question": "مادر",
+    "pronounce": "Maadar",
     "answer": "mother"
   },
   {
     "question": "پدر",
+    "pronounce": "Padar",
     "answer": "father"
   },
   {
     "question": "شیر",
+    "pronounce": "Sheer",
     "answer": "milk"
   },
   {
     "question": "بله",
+    "pronounce": "Baa-leh",
     "answer": "yes"
   },
   {
     "question": "خیر",
+    "pronounce": "Khayr",
     "answer": "no"
+  },
+  {
+    "question": "سلام",
+    "pronounce": "Salam",
+    "answer": "hello"
+  },
+  {
+    "question": "نام",
+    "pronounce": "Naam",
+    "answer": "name"
+  },
+  {
+    "question": "خوش آمدی",
+    "pronounce": "Khush Amadi",
+    "answer": "welcome"
+  },
+  {
+    "question": "خداحافظ",
+    "pronounce": "Khoda Hafiz",
+    "answer": "goodbye"
+  },
+  {
+    "question": "حال شما چطور است",
+    "pronounce": "Haaleh shoma chetor asti",
+    "answer": "how are you"
   }
 ]

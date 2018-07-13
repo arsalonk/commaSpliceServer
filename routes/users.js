@@ -50,10 +50,14 @@ router.post('/answer', (req, res, next) => {
     .then(user => {
       const head = user.head;
       const question = user.list[head];
-      if (answer === question.answer) {
+      const input = answer.trim().toLowerCase()
+      if (input === question.answer) {
         question.m *= 2;
+        question.total += 1;
+        question.correct += 1;
       } else {
         question.m = 1;
+        question.total += 1
       }
 
       let count = question.m;
