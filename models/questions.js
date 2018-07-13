@@ -5,6 +5,7 @@ const mongoose = require ('mongoose');
 const questionsSchema = mongoose.Schema({
 
   question: {type: String, required:true},
+  pronounce: {type: String, required:true},
   answer: {type: String, required: true}
   
 });

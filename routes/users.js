@@ -51,13 +51,19 @@ router.post('/answer', (req, res, next) => {
       const head = user.head;
       const question = user.list[head];
       const input = answer.trim().toLowerCase()
+      console.log(input)
+      console.log(question.answer)
       if (input === question.answer) {
         question.m *= 2;
-        question.total += 1;
-        question.correct += 1;
+        console.log('first q', question.total)
+        question.total = question.total + 1;
+        console.log('seond q',question.total)
+        console.log('first c', question.correct)
+        question.correct = question.correct + 1;
+        console.log('second c', question.correct)
       } else {
         question.m = 1;
-        question.total += 1
+        question.total = question.total + 1;
       }
 
       let count = question.m;
@@ -73,7 +79,8 @@ router.post('/answer', (req, res, next) => {
       user.head = question.next;
       question.next = currentQ.next;
       currentQ.next = head;
-      return user.save();
+      user.save();
+      return user.list[head];
     })
     .then(user => res.json(user))
     .catch(err => next(err));
