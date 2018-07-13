@@ -1,45 +1,45 @@
-# Thinkful Backend Template
+# Learn Farsi
 
-A template for developing and deploying Node.js apps.
+[Client Side Repo](https://github.com/thinkful-ei20/SP-sayed-darren-client)
+
+A spaced repitition app build to help people learn and practice Farsi. Once logged in the app displays a word in Farsi and asks for the English translation, once given an input the app will display whether the user was correct or incorrect, the english translation of the word, and how many times the user has gotten the answer correct for that specific word.
 
 ## Getting started
 
-### Setting up a project
+Clone repo and run npm install
 
-* Move into your projects directory: `cd ~/YOUR_PROJECTS_DIRECTORY`
-* Clone this repository: `git clone https://github.com/Thinkful-Ed/backend-template YOUR_PROJECT_NAME`
-* Move into the project directory: `cd YOUR_PROJECT_NAME`
-* Install the dependencies: `npm install`
-* Create a new repo on GitHub: https://github.com/new
-    * Make sure the "Initialize this repository with a README" option is left unchecked
-* Update the remote to point to your GitHub repository: `git remote set-url origin https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME`
+Create a local mongo database and then enter it's name in config.js
 
-### Working on the project
+DATABASE_URL:
+        process.env.DATABASE_URL || 'mongodb://localhost/thinkful-backend'
 
-* Move into the project directory: `cd ~/YOUR_PROJECTS_DIRECTORY/YOUR_PROJECT_NAME`
-* Run the development task: `npm start`
-    * Starts a server running at http://localhost:8080
-    * Automatically restarts when any of your files change
+Replace 'thinkful-backend' with your database name.
+
+run node utils/seed-DB.js
+
+This will create or overwrite(will erase all user data) the users and questions collections.
 
 ## Databases
 
-By default, the template is configured to connect to a MongoDB database using Mongoose.  It can be changed to connect to a PostgreSQL database using Knex by replacing any imports of `db-mongoose.js` with imports of `db-knex.js`, and uncommenting the Postgres `DATABASE_URL` lines in `config.js`.
+Connects to a MongoDB database using Mongoose.  
 
-## Deployment
+## Clone and Run
 
-Requires the [Heroku CLI client](https://devcenter.heroku.com/articles/heroku-command-line).
+## Tech-stack
+- node
+- express
+- mongo/mongoose
+- jwt-decode
 
-### Setting up the project on Heroku
+### Noteable File Paths
 
-* Move into the project directory: `cd ~/YOUR_PROJECTS_DIRECTORY/YOUR_PROJECT_NAME`
-* Create the Heroku app: `heroku create PROJECT_NAME`
+/DB/seed folder has the questions for seeding the database as well a 'test' and 'test2' dummy user, both with a password "password".
 
-* If your backend connects to a database, you need to configure the database URL:
-    * For a MongoDB database: `heroku config:set DATABASE_URL=mongodb://USERNAME:PASSWORD@HOST:PORT/DATABASE_NAME`
-    * For a PostgreSQL database: `heroku config:set DATABASE_URL=postgresql://USERNAME:PASSWORD@HOST:PORT/DATABASE_NAME`
+/models folder has the schemas for Mongo
 
-* If you are creating a full-stack app, you need to configure the client origin: `heroku config:set CLIENT_ORIGIN=https://www.YOUR_DEPLOYED_CLIENT.com`
+/passport folder has the jwt and local strategies
 
-### Deploying to Heroku
+/routes folder has the endpoints
 
-* Push your code to Heroku: `git push heroku master`
+/utils folder has the seed-DB.js file you run in node to seed the database 
+

@@ -9,7 +9,7 @@ const { TEST_DATABASE_URL, JWT_SECRET } = require('../config');
 const jwt = require('jsonwebtoken');
 
 const User = require('../models/user');
-const seedUsers = require('../db/seed/users');
+const seedUsers = require('../DB/seed/users');
 
 const expect = chai.expect;
 chai.use(chaiHttp);

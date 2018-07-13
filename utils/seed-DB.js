@@ -6,8 +6,8 @@ const { DATABASE_URL } = require('../config');
 const Questions = require('../models/questions');
 const User = require('../models/user');
 
-const seedQuestions = require('../db/seed/questions');
-const seedUsers = require('../db/seed/users');
+const seedQuestions = require('../DB/seed/questions');
+const seedUsers = require('../DB/seed/users');
 
 mongoose.connect(DATABASE_URL)
   .then(() => {
