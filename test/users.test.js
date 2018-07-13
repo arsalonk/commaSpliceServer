@@ -12,7 +12,7 @@ const Questions = require('../models/questions');
 const seedQuestions = require('../DB/seed/questions');
 
 const User = require('../models/user');
-const seedUsers = require('../db/seed/users');
+const seedUsers = require('../DB/seed/users');
 
 const expect = chai.expect;
 chai.use(chaiHttp);
