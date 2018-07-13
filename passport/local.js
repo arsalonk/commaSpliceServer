@@ -29,9 +29,7 @@ const localStrategy = new LocalStrategy((username, password, done) => {
         });
       }      
     })
-    .then(() => {      
-      console.log('user.authtoken!!!!!: ',user);
-      
+    .then(() => {         
       return done(null, user, { success: true });
 
     })

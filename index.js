@@ -5,8 +5,9 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
+const mongoose = require('mongoose');
 
-const { PORT, CLIENT_ORIGIN } = require('./config');
+const { PORT, CLIENT_ORIGIN, DATABASE_URL } = require('./config');
 const { dbConnect } = require('./db-mongoose');
 
 const passport = require('passport');
@@ -62,5 +63,24 @@ if (require.main === module) {
   dbConnect();
   runServer();
 }
+
+// if (require.main === module) {
+//   mongoose.connect(DATABASE_URL)
+//     .then(instance => {
+//       const conn = instance.connections[0];
+//       console.info(`Connected to: mongodb://${conn.host}:${conn.port}/${conn.name}`);
+//     })
+//     .catch(err => {
+//       console.error(`ERROR: ${err.message}`);
+//       console.error('\n === Did you remember to start `mongod`? === \n');
+//       console.error(err);
+//     });
+
+//   app.listen(PORT, function () {
+//     console.info(`Server listening on ${this.address().port}`);
+//   }).on('error', err => {
+//     console.error(err);
+//   });
+// }
 
 module.exports = { app };

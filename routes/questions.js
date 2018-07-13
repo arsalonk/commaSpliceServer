@@ -5,7 +5,6 @@ const router = express.Router();
 const passport = require('passport')
 
 const Questions = require('../models/questions')
-const User = require('../models/user')
 
 router.use('/', passport.authenticate('jwt', { session: false, failWithError: true }));
 
