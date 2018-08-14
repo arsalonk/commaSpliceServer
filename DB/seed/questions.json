@@ -10,6 +10,11 @@
     "answer": "father"
   },
   {
+    "question": "اب",
+    "pronounce": "Ob",
+    "answer": "water"
+  },
+  {
     "question": "شیر",
     "pronounce": "Sheer",
     "answer": "milk"
@@ -35,6 +40,16 @@
     "answer": "name"
   },
   {
+    "question": "کجا",
+    "pronounce": "Koja",
+    "answer": "where"
+  },
+  {
+    "question": "خانه",
+    "pronounce": "Khonah",
+    "answer": "home"
+  },
+  {
     "question": "خوش آمدی",
     "pronounce": "Khush Amadi",
     "answer": "welcome"
@@ -48,5 +63,30 @@
     "question": "حال شما چطور است",
     "pronounce": "Haaleh shoma chetor asti",
     "answer": "how are you"
+  },
+  {
+    "question": "اسم شما چیست",
+    "pronounce": "Esme shoma chist",
+    "answer": "what's your name"
+  },
+  {
+    "question": "دوستت دارم",
+    "pronounce": "Doste darem",
+    "answer": "i love you"
+  },
+  {
+    "question": "نمیدانم",
+    "pronounce": "Nemidanam",
+    "answer": "I dont know"
+  },
+  {
+    "question": "ساعت چند است",
+    "pronounce": "Sa'at chand ast",
+    "answer": "what time is it"
+  },
+  {
+    "question": "من گم شدم",
+    "pronounce": "Man gom shodam",
+    "answer": "im lost"
   }
 ]

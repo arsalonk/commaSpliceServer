@@ -50,7 +50,7 @@ router.post('/answer', (req, res, next) => {
     .then(user => {
       const head = user.head;
       const question = user.list[head];
-      const input = answer.trim().toLowerCase()
+      const input = answer.trim().toLowerCase();
       if (input === question.answer) {
         question.m *= 2;
         question.total = question.total + 1;
