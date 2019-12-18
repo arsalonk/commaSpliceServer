@@ -1,92 +1,42 @@
 [
   {
-    "question": "مادر",
-    "pronounce": "Maadar",
-    "answer": "mother"
+    "question": "I love going to the movies, it's so fun.",
+    "answer": "incorrect",
+    "explanation": "I love going to the movies because it's so fun"
   },
   {
-    "question": "پدر",
-    "pronounce": "Padar",
-    "answer": "father"
+    "question": "I like potatoes, but I love carrots.",
+    "answer": "correct",
+    "explanation": ""
   },
   {
-    "question": "اب",
-    "pronounce": "Ob",
-    "answer": "water"
+    "question": "I think he's in love, he acts so weird now.",
+    "answer": "incorrect",
+    "explanation": "I think he's in love because he acts so weird now."
   },
   {
-    "question": "شیر",
-    "pronounce": "Sheer",
-    "answer": "milk"
+    "question": "She was sad when the cat ran away, she doesn't want to get a new one.",
+    "answer": "incorrect",
+    "explanation": "Even though she was sad when the cat ran away, she doesn't want to get a new one."
   },
   {
-    "question": "بله",
-    "pronounce": "Baa-leh",
-    "answer": "yes"
+    "question": "I love going to the movies, it's so fun.",
+    "answer": "incorrect",
+    "explanation": "I love going to the movies because it's so fun"
   },
   {
-    "question": "خیر",
-    "pronounce": "Khayr",
-    "answer": "no"
+    "question": "I love going to the movies, it's so fun.",
+    "answer": "incorrect",
+    "explanation": "I love going to the movies because it's so fun"
   },
   {
-    "question": "سلام",
-    "pronounce": "Salam",
-    "answer": "hello"
+    "question": "I love going to the movies, it's so fun.",
+    "answer": "incorrect",
+    "explanation": "I love going to the movies because it's so fun"
   },
   {
-    "question": "نام",
-    "pronounce": "Naam",
-    "answer": "name"
-  },
-  {
-    "question": "کجا",
-    "pronounce": "Koja",
-    "answer": "where"
-  },
-  {
-    "question": "خانه",
-    "pronounce": "Khonah",
-    "answer": "home"
-  },
-  {
-    "question": "خوش آمدی",
-    "pronounce": "Khush Amadi",
-    "answer": "welcome"
-  },
-  {
-    "question": "خداحافظ",
-    "pronounce": "Khoda Hafiz",
-    "answer": "goodbye"
-  },
-  {
-    "question": "حال شما چطور است",
-    "pronounce": "Haaleh shoma chetor asti",
-    "answer": "how are you"
-  },
-  {
-    "question": "اسم شما چیست",
-    "pronounce": "Esme shoma chist",
-    "answer": "what's your name"
-  },
-  {
-    "question": "دوستت دارم",
-    "pronounce": "Doste darem",
-    "answer": "i love you"
-  },
-  {
-    "question": "نمیدانم",
-    "pronounce": "Nemidanam",
-    "answer": "I dont know"
-  },
-  {
-    "question": "ساعت چند است",
-    "pronounce": "Sa'at chand ast",
-    "answer": "what time is it"
-  },
-  {
-    "question": "من گم شدم",
-    "pronounce": "Man gom shodam",
-    "answer": "im lost"
+    "question": "I love going to the movies, it's so fun.",
+    "answer": "incorrect",
+    "explanation": "I love going to the movies because it's so fun"
   }
 ]
