@@ -16,7 +16,7 @@ const userSchema = mongoose.Schema({
       answer: String,
       correct: {type: Number, default: 0},
       total: {type: Number, default: 0},
-      pronounce: String
+      explanation: String
     }
   ],
   head: {type: Number, default: 0}
